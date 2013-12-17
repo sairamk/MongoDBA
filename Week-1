@@ -1,0 +1,12 @@
+Home work 1.1  db.isMaster().maxBsonObjectSize
+Ans: 16777216
+
+Home work 1.2 db.products.find({type:"case"}).count()
+Ans: 3
+
+Home work 1.3 what query would you run to get all the products where brand equals the string “ACME”?
+Ans: db.products.find({brand:"ACME"})
+
+Home work 1.4 How would you print out, in the shell, the name of all the products without extraneous characters or braces, sorted alphabetically, ascending? (Check all that would apply.)
+Ans: var c = db.products.find({},{name:1,_id:0}).sort({name:1}); while( c.hasNext() ) print( c.next().name);
+var c = db.products.find({}).sort({name:1}); c.forEach( function(doc){ print(doc.name) } );
